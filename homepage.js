@@ -3,7 +3,7 @@ const myFunction = () => {
     btn.className = "card col-md-3";
     btn.style = "display: inline-block"; 
     var videoTitle = "sample"; 
-    var video = '<a href="www.facebook.com">' + '<div class="card-image-top">' + '<video width="100%">' + 
+    var video = '<a href="video.html">' + '<div class="card-image-top">' + '<video width="100%" controls>' + 
     '<source src="videos/' + videoTitle + '.mkv" type="video/mp4">' +
     '<source src="videos/' + videoTitle + '.webm" type="video/webm">' +
     'Your browser does not support HTML video.' +
