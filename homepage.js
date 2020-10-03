@@ -1,17 +1,19 @@
-const myFunction = () => {
+import {database} from './database.js';
+
+const myFunction = (btn) => {  
+  document.getElementById("videos").appendChild(btn);
+}  
+
+const myfunc = database.videos.map((video) => {
     var btn = document.createElement("DIV");
     btn.className = "card col-md-3";
     btn.style = "display: inline-block"; 
-    var videoTitle = "sample"; 
-    var video = '<a href="video.html">' + '<div class="card-image-top">' + '<video width="100%" controls>' + 
+    var videoTitle = video.name; 
+    var video = '<a href="video.html?name=' + encodeURIComponent(videoTitle) + '">' + '<div class="card-image-top">' + '<video width="100%">' + 
     '<source src="videos/' + videoTitle + '.mkv" type="video/mp4">' +
     '<source src="videos/' + videoTitle + '.webm" type="video/webm">' +
     'Your browser does not support HTML video.' +
-  '</video>' + '<p>' + 'Criminal Justice Video Sample' + '</p>' + '</div>' + '</a>';
+    '</video>' + '<p>' + video.title + '</p>' + '</div>' + '</a>';
     btn.innerHTML = video;
-    document.getElementById("videos").appendChild(btn);
-}  
-
-for(var i = 0; i < 5; i++){
-    myFunction();
-}
+    return myFunction(btn);
+});
