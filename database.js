@@ -11,8 +11,13 @@ var database = {
             "Liked": 0
         },
         {
-            "name": "Zindagi Na Milegi Dobara",
+            "name": "ZNMD",
             "title": "Zindagi Na Milegi Dobara 2011 scene",
+            "Liked": 0
+        },
+        {
+            "name": "GOT",
+            "title": "Game of Thrones: John Snow",
             "Liked": 0
         }
     ]
